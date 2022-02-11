@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SDLC Models</title>
+</head>
+<body>
+            <h2>Models</h2>
+
+        <button class="accordion">Koskmudel</button>
+        <div class="panel">
+        <p>Koskmudelit kirjeldas esmakordselt Winston W. Royce 1970. aastal.</p>
+        <p>Koskmudel on järjestikune mudel, mida kasutatakse erineva tarkvara loomiseks, kus projekt kulgeb pidevalt allapoole ega pöördu tagasi samamoodi nagu koskede puhul. Niisiis tähendab kose mudel, et järgmise etapi juurde peaks liikuma alles siis, kui eelmine etapp on lõpule viidud, kuigi mõne mudeli puhul võivad mõningad variatsioonid ja muutused olla.</p>
+        <p>Koskmudelit saab kasutada, kui: 
+            <ul>
+                <li>Projekt on väike</li>
+                <li>Nõuded on hästi tuntud, selged ja fikseeritud</li>
+                <li>Toote määratlus on stabiilne</li>
+                <li>Tehnoloogia ja tehtavad muudatused on arusaadavad</li>
+                <li>Puuduvad mitmetähenduslikud nõuded</li>
+                <li>Kvaliteetsed allikad on vabalt kättesaadavad</li>
+                <li>Tarkvara on suhteliselt väikesemahuline</li>
+            </ul>
+        </p>
+        <img src="images/koskmudel.jpeg" alt="" width="250px">
+        </div>
+
+        <button class="accordion">Iteratiivne arendus</button>
+        <div class="panel">
+        <p>Tarkvara spetsifikatsioon, kavand ja realisatsioon on tükeldatud osadeks, mida arendatakse järjest ja
+            kordamööda. (Mills jt 1980) Tulemusena peaks vähenema ümbertegemiste hulk ja ka kliendid
+            saavad võimaluse oma vajadusi pikema aja vältel ringi mõelda. See mudel kombineerib lineaarse
+            arenduse iteratiivse mõtlemise ja prototüüpimise.</p>
+        <p>Alguses määratakse nõudmised üldisemal kujul, samuti millised teenused on tähtsamad ja millised
+            vähemtähtsad. Edasi määratakse tarneosad – mitme tarnena ja millest koosnevana klient oma
+            tarkvara saama hakkab. Iga osa peab andma süsteemi kindla funktsionaalsuse, sh tootmist
+            alustatakse kõrgema prioriteediga osadest. Kui osad on määratud, võetakse ette 1. osa ja hakatakse
+            seda detailiseerima, kasutades selleks sobivaimat protsessi (ja miks ka mitte koskmudelit).
+            Samaaegselt saab täpsustada teiste osade nõudmisi, kuid töös oleva tüki omad on külmutatud. Kui
+            väga vaja, pöördutakse nende juurde tagasi hiljem. Kui tükk saab valmis, tarnitakse see kliendile,
+            kes saab selle töösse rakendada.</p>
+        <p>Klient saab juba proovida, katsetada ning tal on lihtsam kujundada nõudmisi järgmiste osade jaoks (või sama osa hilisemate versioonide tarvis). Uued osad liidestatakse olemasolevatega. Kõiki osi ei
+            pea arendama sama protsessi kasutades.</p>
+        <p><b>Eelised:</b></p>
+        <p>
+            1. Klient ei pea lõputult ootama, esmaseid soove saab juba rahuldada, juba saab tööd teha<br>
+            2. Esimesed osad on ka justkui prototüübid, mis aitavad järgmiste osade funktsionaalsust
+            täpsustada, kliendil hakkab tekkima mingi kogemus ja arusaamine.<br>
+            3. Kogu projekti läbikukkumise risk on väiksem. Probleemid võivad tekkida mõnede osadega, kuid
+            eeldatavasti mitte kõigiga.<br>
+            4. Et kõrgema prioriteediga osad esimestena töösse saavad, läbivad nad ka intensiivsema testimise
+            kliendi enda poolt.<br>
+            5. Maandab tehnilisi riske – kui kõige uuemat riistvara (see ei pruugi olla arvuti) pole veel arenduse
+            alguses võimalik saada, siis saab tööd alustada nendest osadest, mis riistavarast tugevalt ei sõltu
+            jms</p>
+        <p><b>Probleemid:</b></p>
+        <p>Paraja suurusega osade fikseerimine – ei saa olla liiga suur ega liiga väike (mitte enam kui 20 000
+            koodirida) ja lisaks tagama süsteemi ühe konkreetse funktsionaalsuse. Parajat suurust on raske
+            saavutada ja õnnetuseks kasutatakse tihti sama funktsionaalsust süsteemi erinevate osade juures.<br>
+            Seda mudelit kasutab tänapäeval tuntuim meetod XP – “extreme programming”.</p>
+        <img src="images/iterative.PNG" alt="" width="500px">
+        </div>
+
+        <button class="accordion">Prototüüpimisele orienteeritud mudel</button>
+        <div class="panel">
+        <p>Kui kasutajal või arendajal on detailid ebaselged, võib kasu olla prototüüpimisele oreinteeritud
+            arendusmudelist. Prototüüp aitab määrata nõudmisi. </p>
+        <p>Etapid on järgmised:</p>
+            <ul>
+                <li><b>Nõudmiste kogumine</b> – seda tehakse üldisemal tasemel ja samas ka fikseeritakse, kus on
+                    kindlasti vaja edaspidi täpsustama hakata.</li>
+                <li><b>Kiire kavandamine</b> - keskendub nö nähtavale osale (s/v, vormid jms) ja selle tulemuseks on
+                    prototüüp. Klient hindab prototüüpi ja oskab nüüd ehk ka oma soove täpsustada.</li>
+                <li>Järgneb iteratsioon, kuni prototüüp on paremaks seatud ja rahuldab kasutajat. Samal ajal on ka
+                    arendajal uusi teadmisi soovide kohta.</li>
+                <li>Igal juhul peab prototüüpi saama kiiresti luua kasutadaes selleks abivahendeid.</li>               
+            </ul>
+        <p><b>Probleemid:</b></p>
+        <p>Klient ei saa aru, et prototüüp püsib enamasti koos “kleeplindi ja nätsu abil”. Et tegelikult selleks, et
+            saada korralikku töötavat süsteemi, tuleb kõike otsast alata ja olemasolev asi ära visata. Ta nõuab
+            visalt väikeste “vigade kõrvaldamist” ja programmi töösse andmist.
+            Selle tulemusena arendaja kiirustab, kasutab esimesi ettejuhtuvaid ja lihtsaid vahendeid,
+            ebaeffektiivseid algoritme jne. Hiljem aga unustab, et see oli mõeldud ajutisena. Ei ole midagi
+            püsivamat kui ajutised lahendused.
+            Kui aga mängureeglid kohe alguses paika panna, peaks see mudale päris hästi töötama.</p>
+        </div>
+
+        <button class="accordion">Spiraalne arendus</button>
+        <div class="panel">
+        <p>Spiraalse arengumudeli pakkus esimest korda välja Boehm 1988 a. Protsessi kulgemist kujutab
+            spiraal. Iga keerd on mingi tarkvaraprotsessi faas. Esimene kordus võib olla näiteks seotud süsteemi
+            teostatavuse uurimisega, teine nõudmiste kirjeldamisega, järgmine kavandamisega jne. Mitu kordust
+            on enamasti seotud tarkvara realiseerimisega, kus tema ehitamine toimub inkrementaalselt.
+            Alustatakse spiraali keskelt ja liigutakse päripäeva.
+            Iga kordus on jaotatud 3 kuni 6 sektorisse (erinevad autorid jagavad erinevalt). Sektorite
+            töömahukus ei pruugi olla ühesugune. </p>
+        <p>Boehm'i järgi on sektoreid neli:</p>
+        <p>1. Eesmärkide seadmine (Objective setting) – määratakse selle faasi ehk spiraalikeeru eesmärgid,
+            piirangud protsessis, tulemused, juhtimisplaan, võimalikud riskid, alternatiivsed strateegiad
+            lähtudes riskidest.
+        <p>2. Riskide hindamine ja maandamine (Risk assessment and reduction) – iga leitud riski jaoks
+            tehakse analüüs, võetakse midagi ette riskide maandamiseks (nt risk, et nõudmised pole
+            adekvaatsed: tehakse prototüüp)</p>
+        <p>3. Arendus ja valideerimine (development and validation) – valitakse arendusmudel, mis lähtub
+            hinnatud riskidest (mudel peab olema selline, mis riske vähendada aitab). Nt kui kasutajaliides
+            on suurim risk, siis võib aidata prototüüpimisele tuginev arendus.</p>
+        <p>4. Planeerimine (planning) – projekt vaadatakse üle ja tehakse otsus, kas jätkata järgmisel
+            spiraalikeerul, kui otsustatakse jätkata, tehakse järgmise faasi jaoks plaan.</p>
+        <p>Selle mudeli kõige suurem erinevus teistest on riskidega arvestamine. Risk – so miski, mis saab
+            untsu minna. Riskide tõttu ületatakse tähtajad ja maksumus, seepärast peab riskidega arvestama.
+            Konkreetseid faase, nagu kavandamine või spetsifitseerimine ei eristata.</p>           
+    
+        <img src="images/spiral.PNG" alt="" width="500px">
+        </div>
+
+        <button class="accordion">V-Mudel</button>
+        <div class="panel">
+        <p>V mudel on juga mudeli pikendus. Sellel on iga arendusetapi jaoks vastav testimisfaas. Seetõttu on arengutsükli iga etapi jaoks seotud testimise etapp. Paralleelselt kavandatakse vastav arendusetapi testimisetapp. Seda mudelit tuntakse ka kui verifitseerimise ja valideerimise mudelit.<br>
+            Esimene etapp on nõuete kogumine. SRS on selles etapis ette valmistatud. Selles etapis tehakse ka vastuvõtu kavandamise kava. See on sisend aktsepteerimistestimiseks. Projekteerimisetapp hõlmab kahte etappi. Arhitektuurikujundus hõlmab süsteemi jaoks vajalikku arhitektuuri. See on tuntud kui kõrgetasemeline disain. Mooduli disain on tuntud kui madala taseme disain. Tegelik kodeerimine algab kodeerimisfaasis.<br>
+            Ühikute testimisel testitakse väikseid mooduleid või ühikuid. Integreerimise testimise eesmärk on testida kahe erineva mooduli voogu. Süsteemi testimise eesmärk on kontrollida kogu süsteemi funktsionaalsust. Vastuvõtu testimine on tarkvara testimine kasutaja keskkonnas. Samuti kontrollitakse, kas süsteem on kooskõlas tarkvaranõuete spetsifikatsiooniga.<br>
+            Üldiselt sobib v mudel, kui projekt on lühike ja kui nõuded on väga selged. See ei ole sobiv suurte, keerukate ja objektile suunatud projektide jaoks.</p>
+        <img src="images/vmodel.PNG" alt="" width="500px">
+        </div>
+
+        <button class="accordion">Agile</button>
+        <div class="panel">
+        <p>SDLC üks väga tõhusaid meetodeid on Agile Model. Agiilne mudel keskendub nii arenduse kui ka testimise jätkuvale korramisele.<br>
+            Agiilne mudeliprotsess SDLC-s hõlbustab arendajaid meeskonnaga suhtlemisel ja annab kliendile käimasoleva projekti kohta täieliku idee ning teeb vajadusel muudatusi. See paneb arendajad muudatusi tegema vastavalt kliendi interaktsioonile ja säästab ümbertöötamisel palju aega. Kuna see lähenemine töötab arendamisel ja testimisel käsikäes, töötavad arendajad ja testijad koos.<br>
+            Agiilses testimises kasutatakse erinevat tüüpi meetodeid, mis põhinevad arengustiilil. Allpool on toodud paindlik testimismetoodika:<br>
+            Scrum<br>
+            Kanban<br>
+            Äärmuslik metoodika<br>
+            Kristallide metoodika<br>
+            Dünaamiline tarkvara arendamise meetod (DSDM)<br>
+            Funktsionaalne arendamine (FDD)<br>
+            Lean tarkvara arendamine<br>
+        </p>
+        <p>Agile mudel on edukas kui traditsiooniline SDLC mudel, kuna see töötab nii arendus- kui ka testimismeeskondadega. See parandab kvaliteeti. Kuna see mudel koosneb uuenduslikest tavadest, mis hõlmavad sprindi planeerimist, armatuurlaua kavandamist ja püstijalakoosolekut, teeb see koostööd kliendi, organisatsiooni ja müüjate vahel. Kliendi kaasamine arendusfaasi annab neile usalduse kvaliteetse toote vastu. Agile on paindlik, hõlbustades sellega arendajaid, sidusrühmi ja testijaid.</p>
+        <img src="images/agile.PNG" alt="" width="500px">
+        </div>
+
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+        </script>
+</body>
+</html>
