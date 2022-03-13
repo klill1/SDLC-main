@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    td, th {
+      border: 1px solid black;
+      padding: 0.3rem;
+    }
+
+    th {
+      color: white;
+      background-color: blueviolet;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>ColorAndShades Database</h2>
+
+  <div class="panel">
+    <p><a href="">Link to ColorAndShades App</a></p>
+  </div>
+
+  <!-- Trigger/Open The Modal -->
+  <button id="myBtn">Open ERD</button>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>ColorAndShades ERD</h3>
+      <img src="../images/ERD_Colors.PNG" alt="Colors ERD">
+
+      <h3>ERD Description</h3>
+
+      <h4>Table PrimaryColor</h4>
+      <ul>        
+        <li>This table shows primary color names and identifying numbers. It is used to sort primary colors.</li>        
+        <li>The Id attribute gives each color a unique number for identification.</li>
+        <li>The PrimaryColorName attribute gives color names.</li>        
+        <li>This table has one primary key Id and it is used a foreign key in the Shades table(PrimaryColorId).</li>
+      </ul>
+
+      <h4>Table Shades</h4>
+      <ul>        
+        <li>This table is used to sort color shades and see what primary colors they connect with using the PrimaryColorId attribute.</li>           
+        <li>The Id attribute gives each shade a unique number for identification.</li>        
+        <li>PrimaryColorId attribute is used to connect primary color to a shade.</li>
+        <li>ColorName attribute is used to know what color shade there is.</li>        
+        <li>This table uses primary key PrimaryColorId from PrimaryColor table as a foreign key to connect shade to a color. Shades can have one primary color and colors can have many shades</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h4>PrimaryColor</h4>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>PrimaryColorName</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Red</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Blue</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Yellow</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Green</td>
+    </tr>    
+  </table>
+
+  <h4>Shades</h4>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>PrimaryColorId</th>
+      <th>ColorName</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>Azure</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>Lemon</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2</td>
+      <td>Cyan</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>1</td>
+      <td>Salmon pink</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>3</td>
+      <td>Mustard</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>4</td>
+      <td>Honeydew</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>4</td>
+      <td>Jungle Green</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>1</td>
+      <td>Crimson</td>
+    </tr>       
+  </table>
+
+
+
+
+  <footer style="text-align: center; margin-top: 5rem;">
+    Copyright 2021 &#169 K.L.
+  </footer>
+
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
