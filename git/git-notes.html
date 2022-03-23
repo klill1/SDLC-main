@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    td,
+    th {
+      border: 1px solid black;
+      padding: 0.3rem;
+    }
+
+    th {
+      color: white;
+      background-color: blueviolet;
+
+    }
+  </style>
+  <title>Git and GitHub notes</title>
+</head>
+
+<body>
+  <div>
+    <h1>Git</h1>
+    <p>
+      <li>Version Control System</li>
+      <li>Manage Source Code History</li>
+      <li>It is LOCAL tool on your machine</li>
+      <br>
+      <li><b>Repository:</b> The location where your code history is stored.</li>
+      <li><b>Branch:</b> "Folder" within the repository containing commits.</li>
+      <li><b>Commits:</b> Different stages of your code inside a branch.</li>
+    </p>
+  </div>
+  <hr>
+  <div>
+    <h1>GitHub</h1>
+    <p>
+      <li>Hosting and Collaboration Provider</li>
+      <li>Git Repository Hosting</li>
+      <li>It's web based. You can push your repository to GitHub. Other people will see your code.</li>      
+    </p>
+    <h1>Commands for Git and GitHub</h1>
+  </div>
+  <!-- Trigger/Open The Modal -->
+  <button id="myBtn">Open Commands for Git and GitHub</button>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Commands for Git</h3>
+      <ul>
+        <li><b>$git init</b> - Initializes a local Git repository/ creates a repository. Makes git files to folder.
+          Before that you have to navigate to project folder.</li>
+        <li><b>$git status</b> - Show status of git repository and shows if we have any untracked changes.</li>
+        <li><b>$git add .</b> - Add all files/ changes of your project to tracking logic of git.</li>
+        <li><b>$git add filename</b> - Add selected files with it, but typically we use git add. to add all files.</li>
+        <li><b>$git commit -m "comment"</b> - Commited code and added to repository, "comment" is to understand what
+          changes you made.</li>
+        <li><b>$git branch</b> - Shows all the branches that are available and shows what branch you are currently using.
+        </li>
+        <li><b>$git checkout -b new-branch-name</b> - Creates new branch with name new-branch-name</li>
+        <li><b>$git log</b> - Allows to get overview of all the commits that we have in the branch that we are currently
+          located in. Last commit you made is HEAD in your branch. You can get commit id from here.</li>
+        <li><b>$git checkout commitId</b> - You can use it to do both, check out branches or in that case, commits. And
+          when doing git log, you will get the ID of a specific commmit and then get checkout plus ID to check out this
+          commit. If you want to go back to the latest commit then you have to write <b>git master</b></li>
+        <li><b>$git reset --hard commitId</b> - Resets the index and working tree. Any changes to tracked files in the
+          working tree since commit are discarded. Instead of commitId should be the ID we want to go back.</li>
+        <li><b>$git checkout -- .</b> - Helps to go back to the last commit we did and to get rid of all unstaged
+          changes. Means that you have saved the file but have not used add .</li>
+        <li><b>$git checkout branch-name</b> - Changes to this branch.</li>
+        <li><b>$git merge branch-name</b> - Add files from other branch to the master branch. If you want to merge the
+          branches you have to be in the master branch and to add the changes from the other branch.</li>
+        <li><b>$git branch -D branch-name</b> - Now when we have merged branches we dont need the other branch anymore
+          and we can delete it</li>
+      </ul>
+
+      <h3>Commands for GitHub</h3>
+      <ul>
+        <li><b>$git remote add origin ...</b> - To establish a connection between the local repository and a remote repository on GitHub.</li>
+        <li><b>$git remote</b> - List the remote connections you have to other repositories.</li>
+        <li><b>$git remote -v</b> - List the current remotes associated with the local repository. To see the origin more specifically and the url behind that.</li>
+        <li><b>$git push -u origin master</b> - Push your branches to the remote repository</li>
+        <li><b>$git branch</b> - Shows us in which branch we are currently.</li>
+        <li><b>$git clone ... </b> - To clone someone's repository to our computer.</li>
+        <li><b>$git push</b> - Push the files. Uploads all local branch commits to the remote.</li>
+        <li><b>$git fetch</b> - To synchronize the code in GitHub repository and to remote tracking branch.</li>
+        <li><b>$git merge origin/master</b> - To merge the local repository with the remote tracking branch.</li>
+        <li><b>$git pull</b> - Updates your current local working branch with all new commits from the corresponding remote branch on GitHub. Git pull is a combination of git fetch and git merge.</li>
+        <li><b>$git remote rm origin</b> - Remove the repository.</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  
+  
+  
+
+  
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>
